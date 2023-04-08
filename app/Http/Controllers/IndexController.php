@@ -21,7 +21,7 @@ class IndexController extends Controller
         $validated = $request->validate([
             'image' =>  'required|image',
             'text'  =>  'nullable|string',
-            'audio' =>  'nullable|image|mimes:application/octet-stream,audio/mpeg,mpga,mp3,wav',
+            'audio' =>  'nullable|mimes:application/octet-stream,audio/mpeg,mpga,mp3,wav',
         ]);
 
         $this->model = MediaModel::create([]);
